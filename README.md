@@ -2,7 +2,7 @@
 
 hsl, rgb, hexadecimal, convert to each other
 
-Here are two examples， and Enter triggers copy
+Here are two examples， and enter triggers copy
 
 ![alt text](image.png)
 
