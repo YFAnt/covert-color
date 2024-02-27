@@ -8,4 +8,4 @@ Here are some examples, enter triggers copy
 
 ![covert hexadecimal](./metadata/covert-color-2.png)
 
-![covert rgb](./metadata/covert-color-3.png)]
+![covert rgb](./metadata/covert-color-3.png)
