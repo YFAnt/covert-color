@@ -1,7 +1,7 @@
 import { List, Icon, ActionPanel, Action, LaunchProps } from "@raycast/api";
 import { useEffect, useState } from "react";
 import { trimText } from "./utils";
-import { getColorType, dealWithOthers, dealWithNamedColor } from "./color";
+import { getColorType, dealWithOthers } from "./color";
 import { ColorDescribe } from "./type";
 
 interface EasydictArguments {
@@ -20,8 +20,7 @@ export default function Command(props: LaunchProps<{ arguments: EasydictArgument
       return;
     }
     const colorType = getColorType(str);
-    const isNamedColor = colorType === "named";
-    setColorResult(isNamedColor ? dealWithNamedColor(str) : dealWithOthers(str, colorType));
+    setColorResult(dealWithOthers(str, colorType));
   }
 
   useEffect(() => {
@@ -37,8 +36,8 @@ export default function Command(props: LaunchProps<{ arguments: EasydictArgument
             icon={{
               source: Icon.CircleFilled,
               tintColor: {
-                light: item.title,
-                dark: item.title,
+                light: item.iconColor,
+                dark: item.iconColor,
                 adjustContrast: false,
               },
             }}
